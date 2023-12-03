@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "win",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "D:/Program/MinGW/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "clang-x64",
+            "compilerArgs": []
+        }
+    ],
+    "version": 4
+}

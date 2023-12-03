@@ -1,0 +1,1 @@
+{"name":"Local: ttt","url":"e:\\VScode\\vscodecpp\\ttt.cpp","tests":[{"id":1698330622703,"input":"2 1110 400\n100 200 1\n3 4","output":"Yes"},{"id":1698330994411,"input":"7 4000 400 \n2000 200 4\n1 2 3 4 5 6 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\VScode\\vscodecpp\\ttt.cpp","group":"local","local":true}
