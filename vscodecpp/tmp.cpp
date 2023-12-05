@@ -1,56 +1,32 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
 using namespace std;
-#define int long long
-#define IOS                           \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(0);                       \
-    cout.tie(0)
-#define endl '\n'
-typedef unsigned long long ull;
-typedef long long ll;
-typedef pair<int, int> pii;
-
-void solve()
+#include <iomanip>
+const int N = 15;
+int n, r;
+int arr[N];
+bool st[N];
+void dfs(int u, int x)
 {
-    int n;
-    cin >> n;
-    vector<int> v(n + 1);
-    map<int, int> st;
-    for (int i = 1; i <= n; i++)
+    if (u == r)
     {
-        cin >> v[i];
-        st[v[i]]++;
-    }
-    sort(v.begin(), v.end());
-    vector<int> s(n + 1);
-    for (int i = 1; i <= n; i++)
-        s[i] = s[i - 1] + v[i];
-    int ans = 0, l = 0, cnt = n;
-    for (int i = 1; i <= n; i++)
-    {
-        if (s[i] - s[l] == v[cnt])
+        for (int i = 0; i < r; i++)
         {
-            ans += s[i] - s[l];
-            l = i;
-            cnt--;
+            cout << setw(3) << arr[i] << " ";
         }
-        if (s[i] - s[l] > v[cnt])
+        cout << endl;
+    }
+    else
+    {
+        for (int i = x; i <= n; i++)
         {
-            ans += s[i] - s[l] + v[cnt] - (s[i] - s[l]);
-            l = i - 1;
-            cnt--;
+
+            arr[u] = i;
+            dfs(u + 1, x + 1);
         }
     }
-    cout << ans << endl;
 }
-
-signed main(void)
+int main()
 {
-    IOS;
-    int t = 1;
-    cin >> t;
-    while (t--)
-        solve();
-    return 0;
+    cin >> n >> r;
+    dfs(0, 0);
 }

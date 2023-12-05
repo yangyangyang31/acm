@@ -13,13 +13,27 @@ typedef pair<int, int> pii;
 
 void solve()
 {
-    string a, b;
-    cin >> a >> b;
-    a = ' ' + a;
-    b = ' ' + b;
-    int n = a.size(), m = b.size(), x, y;
-    cin >> x >> y;
-    vector<vector<int>> d(n + 1, vector<int>(m + 1));
+    int n, q;
+    cin >> n >> q;
+    string s;
+    cin >> s;
+    s = ' ' + s;
+    map<pii, int> st;
+    map<char, pii> d;
+    d['U'] = {0, 1};
+    d['D'] = {0, -1};
+    d['L'] = {-1, 0};
+    d['R'] = {1, 0};
+    int x = 0, y = 0;
+    st[{0, 0}] = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        x += d[s[i]].first, y += d[s[i]].second;
+        st[{x, y}] = i;
+    }
+    for (int i = 1; i <= n; i++)
+    {
+    }
 }
 
 signed main(void)

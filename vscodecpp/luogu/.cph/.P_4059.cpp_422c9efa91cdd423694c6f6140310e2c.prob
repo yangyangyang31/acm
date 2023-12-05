@@ -1,0 +1,1 @@
+{"name":"Local: P_4059","url":"e:\\VScode\\vscodecpp\\luogu\\P_4059.cpp","tests":[{"id":1701690742390,"input":"ATGG\nATCC\n5 -4 -4 -4 \n-4 5 -4 -4 \n-4 -4 5 -4 \n-4 -4 -4 5 \n2 1","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\VScode\\vscodecpp\\luogu\\P_4059.cpp","group":"local","local":true}
